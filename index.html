@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="head">
+      <h1>CRUD Operations</h1>
+      <h4>Manage Products Effectively</h4>
+    </div>
+
+    <div class="inputs">
+      <input type="text" id="title" placeholder="Product Title">
+      <div class="price">
+        <input onkeyup="calculateTotal()" type="number" id="price" placeholder="Price">
+        <input onkeyup="calculateTotal()" type="number" id="taxes" placeholder="Taxes">
+        <input onkeyup="calculateTotal()" type="number" id="ads" placeholder="Ads">
+        <input onkeyup="calculateTotal()" type="number" id="discount" placeholder="Discount">
+        <small id="total">Total: 0</small>
+      </div>
+      <input type="number" id="count" placeholder="Count">
+      <input type="text" id="category" placeholder="Category">
+      <button id="submit">Create</button>
+    </div>
+
+    <div class="outputs">
+      <div class="search">
+        <input type="text" id="search" onkeyup="searchData(this.value)" placeholder="Search">
+        <div class="btnSearch">
+          <button onclick="getsearchmood('searchTitle')" id="searchTitle">Search by Title</button>
+          <button onclick="getsearchmood('searchCategory')" id="searchCategory">Search by Category</button>
+        </div>
+      </div>
+      <div id="deleteAll"></div>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Taxes</th>
+            <th>Ads</th>
+            <th>Discount</th>
+            <th>Total</th>
+            <th>Count</th>
+            <th>Category</th>
+            <th>Update</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
